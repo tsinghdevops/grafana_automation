@@ -1,0 +1,23 @@
+{"asctime": "2025-08-12 19:44:13,227", "levelname": "INFO", "message": "{\"timestamp\": \"2025-08-12T19:44:13.227827\", \"action\": \"check_folder\", \"status\": \"exists\", \"details\": {\"folder_title\": \"ACC-NAM\", \"folder_uid\": \"eeusayu1eczcwe\"}}"}
+{"asctime": "2025-08-12 19:44:13,759", "levelname": "INFO", "message": "{\"timestamp\": \"2025-08-12T19:44:13.759855\", \"action\": \"check_team\", \"status\": \"exists\", \"details\": {\"team_name\": \"ACC-NAM-CIReadOnly\", \"team_id\": 5}}"}
+{"asctime": "2025-08-12 19:44:14,323", "levelname": "INFO", "message": "{\"timestamp\": \"2025-08-12T19:44:14.322972\", \"action\": \"check_team\", \"status\": \"exists\", \"details\": {\"team_name\": \"ACC-NAM-CIReadWrite\", \"team_id\": 6}}"}
+{"asctime": "2025-08-12 19:44:14,792", "levelname": "INFO", "message": "{\"timestamp\": \"2025-08-12T19:44:14.792286\", \"action\": \"check_team\", \"status\": \"exists\", \"details\": {\"team_name\": \"ACC-NAM-CIAdmin\", \"team_id\": 7}}"}
+{"asctime": "2025-08-12 19:44:15,917", "levelname": "INFO", "message": "{\"timestamp\": \"2025-08-12T19:44:15.917849\", \"action\": \"merge_permissions\", \"status\": \"success\", \"details\": {\"folder_uid\": \"eeusayu1eczcwe\", \"permissions_set\": {\"5\": 1, \"6\": 2, \"7\": 4}}}"}
+{"log-level": "info", "message": "Processing request started", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Processing request started", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Processing request started", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Folder created successfully with UID eeusayu1eczcwe", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Processing request started", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Folder created successfully with UID eeusayu1eczcwe", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "team created successfully with UID 5", "resource_name": "team_name: ACC-NAM-CIReadOnly"}
+{"log-level": "info", "message": "team created successfully with UID 6", "resource_name": "team_name: ACC-NAM-CIReadWrite"}
+{"log-level": "info", "message": "team created successfully with UID 7", "resource_name": "team_name: ACC-NAM-CIAdmin"}
+{"log-level": "info", "message": "Processing request started", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Folder created successfully with UID eeusayu1eczcwe", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "team created successfully with UID 5", "resource_name": "team_name: ACC-NAM-CIReadOnly"}
+{"log-level": "info", "message": "team created successfully with UID 6", "resource_name": "team_name: ACC-NAM-CIReadWrite"}
+{"log-level": "info", "message": "team created successfully with UID 7", "resource_name": "team_name: ACC-NAM-CIAdmin"}
+{"log-level": "info", "message": "Permissions merged successfully: {5: 1, 6: 2, 7: 4}", "resource_name": "folder_name: eeusayu1eczcwe"}
+{"log-level": "info", "message": "Processing request completed", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "info", "message": "Processing request started", "resource_name": "folder_name: ACC-NAM"}
+{"log-level": "warn", "message": "Folder already exists with UID eeusayu1eczcwe", "resource_name": "folder_name: ACC-NAM"}

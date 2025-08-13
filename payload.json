@@ -1,0 +1,6 @@
+{
+"accountName": "ACC-NAM",
+"readonly": "ACC-NAM-CIReadOnly",
+"readwrite": "ACC-NAM-CIReadWrite",
+"admin": "ACC-NAM-CIAdmin"
+}
