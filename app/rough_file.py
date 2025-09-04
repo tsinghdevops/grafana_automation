@@ -1,20 +1,24 @@
-from app.config import GRAFANA_API_URL, HEADERS
-from app.logger import log_action
-import requests
+from fastapi import FastAPI, HTTPException, Request
+import yaml
 
-def add_external_group_to_team(team_id: int, group_id: str):
-    """
-    Associate an external auth provider group with a Grafana team to enable sync.
-    """
-    url = f"{GRAFANA_API_URL}/api/teams/{team_id}/groups"
-    payload = {"groupId": group_id}
+app = FastAPI()
+
+@app.post("/create_datasource")
+async def create_datasource(request: Request):
     try:
-        resp = requests.post(url, headers=HEADERS, json=payload, verify=False)
-        if resp.status_code == 400 and "already added" in resp.text:
-            log_action("warn", f"External group {group_id} already linked to team {team_id}", "external_sync", group_id)
-            return
-        resp.raise_for_status()
-        log_action("info", f"Added external group {group_id} to team {team_id}", "external_sync", group_id)
+        # Read raw body bytes
+        raw_body = await request.body()
+        # Parse YAML to Python dict
+        payload = yaml.safe_load(raw_body)
+    except yaml.YAMLError:
+        raise HTTPException(status_code=422, detail="Invalid YAML payload")
     except Exception as e:
-        log_action("error", f"Failed to add external group {group_id} to team {team_id}: {e}", "external_sync", group_id)
-        raise
+        raise HTTPException(status_code=500, detail=str(e))
+
+    try:
+        # Pass the parsed dict payload to your existing service function
+        return create_or_get_datasource(payload)
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
